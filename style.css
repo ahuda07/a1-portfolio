@@ -1,0 +1,48 @@
+.container {display: inline-block;
+    text-align: center;  }
+
+/*typewriter animation*/
+.text{
+    color:antiquewhite;
+    font-family: monospace;
+    font-size: 50px;
+    border-right: .15em solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: 
+    type2 2s steps(40),
+    blink 0.8s step-end infinite;
+    /* animation-delay: 1s; */
+
+}
+
+
+@keyframes type2 {
+    0% {
+        width: 0;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        border: none;
+      }
+    }
+
+
+  @keyframes blink {
+    0%, 100% {
+        border-color: #5b968e;
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+  /* @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+    }
+  } */
