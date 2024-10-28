@@ -14,9 +14,6 @@ body {
     height: 100vh;
 }
 
-
-
-
 /*typewriter animation*/
 .text{
     position: fixed;  
@@ -87,21 +84,26 @@ body {
 #social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    animation: slideToTop 5s ease forwards;
+    gap: 20px; /* Adjust spacing between icons */
     position: fixed;
-    top: 0%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
-
+/*For the fa icons*/
 #social-links a {
     color: white;
     font-size: 50px;
     text-align: center;
     text-decoration: none;
-    /* border-radius: 50%; */
     padding: 10px;
+}
+
+#social-links a img {
+    width: 50px; 
+    height: 50px; 
+    object-fit: contain; 
+    margin: auto; 
 }
 
 @keyframes slideUp {
@@ -276,12 +278,11 @@ body {
 
 /* Section Heading */
 .project_heading {
-    font-size: 3em;
+    font-size: 56px;
     font-family: monospace;
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 50px;
-    border-bottom: 3px solid #ffffff;
     display: inline-block;
 }
 
@@ -349,6 +350,69 @@ body {
     max-width: 80%;
     text-align: center;
 }
+
+.contact{
+    padding: 50px 20px;
+    background-color: #000; /* Black background */
+  }
+
+.contact-section{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section h1{
+    font-family: monospace;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: white;
+    font-size: 78;
+    font-family: monospace;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+.contact-form input, .contact-form textarea {
+font-family: monospace;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #ccc;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+
+.submit {
+    padding: 10px 15px;
+    color: #333;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+.submit:hover {
+    background-color: #f0f0f0;
+    border-color: #fff;
+  }
+
 html, body {
     scroll-behavior: smooth; 
 }
