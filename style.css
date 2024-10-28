@@ -1,5 +1,17 @@
-.container {display: inline-block;
-    text-align: center;  }
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #222020;
+}
+.container {  display: flex;              /* Change to flex */
+    justify-content: center;    /* Center horizontally */
+    align-items: center;        /* Center vertically */
+    height: 100vh;              /* Full viewport height to ensure centering */
+    text-align: center; }
 
 /*typewriter animation*/
 .text{
@@ -9,40 +21,42 @@
     border-right: .15em solid;
     white-space: nowrap;
     overflow: hidden;
-    width: 100%;
+    width: 36em;
     animation: 
-    type2 2s steps(40),
+    typing 3s steps(150),
     blink 0.8s step-end infinite;
     /* animation-delay: 1s; */
-
 }
 
-
-@keyframes type2 {
-    0% {
-        width: 0;
-      }
-      99.9% {
-        border-right: .15em solid orange;
-      }
-      100% {
-        border: none;
-      }
+/*Typing animation to mimic typewriter*/
+@keyframes typing {
+    0% {width: 0;}
+    99.9% {border-right: .15em solid orange;}
+        100% {border: none;}
     }
 
+/*Cursor blinking animation*/
+@keyframes blink {
+0%, 100% {
+    border-color: #5b968e;
+}
+50% {
+    border-color: transparent;}
+    }
 
-  @keyframes blink {
-    0%, 100% {
-        border-color: #5b968e;
-    }
-    50% {
-        border-color: transparent;
-    }
+/*Linkedin logo*/
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
 }
 
+#social-links a {
+    color: white;
+    font-size: 50px; /* Size of social media icons */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 10px;
+}
 
-  /* @-webkit-keyframes blink {
-    50% {
-      border-color: tranparent;
-    }
-  } */
