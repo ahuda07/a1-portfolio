@@ -14,6 +14,9 @@ body {
     height: 100vh;
 }
 
+
+
+
 /*typewriter animation*/
 .text{
     position: fixed;  
@@ -97,7 +100,7 @@ body {
     font-size: 50px;
     text-align: center;
     text-decoration: none;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     padding: 10px;
 }
 
@@ -262,6 +265,90 @@ body {
     height: auto;
 }
 
+/*Projects grid*/
+/* Project Container */
+.project_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Section Heading */
+.project_heading {
+    font-size: 3em;
+    font-family: monospace;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #ffffff;
+    display: inline-block;
+}
+
+/* Grid Layout */
+.project_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 30px;
+    color: #222020;
+}
+
+/* Individual Project Card */
+.project_card {
+    transform: translateX(250px);
+    position: relative;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Image */
+.project_image {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Hover Effect */
+.project_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project_card:hover .project_hover {
+    opacity: 1;
+}
+
+/* Project Title and Description */
+.project_hover h3 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.project_hover p {
+    font-size: 1em;
+    margin-top: 10px;
+    max-width: 80%;
+    text-align: center;
+}
 html, body {
     scroll-behavior: smooth; 
 }
