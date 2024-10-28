@@ -1,30 +1,32 @@
 body {
     margin: 0;
-    height: 100vh;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     background-color: #222020;
 }
+
 .container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     text-align: center;
     height: 100vh;
 }
 
 /*typewriter animation*/
 .text{
+    position: fixed;  
+    top: 30%;          
+    left: 50%;         
+    transform: translate(-50%, -50%); 
     color:antiquewhite;
     font-family: monospace;
     font-size: 50px;
     border-right: .15em solid;
     white-space: nowrap;
     overflow: hidden;
-    width: 36em;
+    width: 39em;
     animation:
     typing 3s steps(150,end) forwards,
     pause 1s 5s,
@@ -33,11 +35,11 @@ body {
     /* animation-delay: 1s; */
 }
 
-.text2{
+/* .text2{
     /* display: inline-block; */
-    color: antiquewhite;
+    /* color: antiquewhite;
     font-family: monospace;
-    font-size: 50px;
+    font-size: 40px;
     border-right: 0.15em solid;
     white-space: nowrap;
     overflow: hidden;
@@ -46,9 +48,9 @@ body {
     typing2 4s steps(150, end) 4s forwards,
     delete 3s steps(150, end) 7s forwards,
     blink 0.8s step-end infinite;
-    margin-left: calc(50% - 8em);
+    margin-left: calc(50% - 8em); */
     /* text-align: center; */
-}
+/* }
 
 /*Typing animation to mimic typewriter*/
 @keyframes typing {
@@ -57,20 +59,21 @@ body {
         100% {border: none;}
     }
 
-@keyframes typing2 {
+/* @keyframes typing2 {
     0% { width: 0; }
     100% { width: 28em; }
     100% {border: none;}
-}
+} */
 
 @keyframes delete {
-    0% { width: 100%; }
+    0% { width: 36em; }
+    100% { width: 36em; opacity: 0; }
     100% { width: 0; }
-}  
+}
 
 /*Cursor blinking animation*/
 @keyframes blink {
-0%, 100% {
+    0%, 100% {
     border-color: #5b968e;
 }
 50% {
@@ -82,6 +85,11 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    animation: slideToTop 5s ease forwards;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #social-links a {
@@ -91,5 +99,167 @@ body {
     text-decoration: none;
     border-radius: 50%;
     padding: 10px;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.personalimage img{ 
+    position: absolute;  
+    top: 48%;          
+    left: 5%;        
+    transform: translate(-50%, -60%); 
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+/* Container for about section */
+.about-container {
+    max-width: 1300px;
+    height: -200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: slideFadeIn 2s ease-in-out 11s forwards,
+    /* animation: slideFadeIn 2s ease-in-out .5s forwards, */
+    2s duration, 1s delay;
+}
+
+/* Section Title */
+
+/* Flex container to hold image and text */
+.content {
+    display: flex;
+    height: 300px;
+    flex-direction: row;
+    align-items: center;
+    gap: 0; /* Remove the gap between image and text */
+}
+
+/* Personal image styling */
+.personalimage img { 
+    transform: translateX(-300px);
+    transform: translateY(-205px);
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Text section styling */
+.text-section {
+    padding-left: 465px;
+    /* flex-grow: 1; */
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Prevent overflow if text is too long */
+    background-color: #292928;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 560px;
+    height: 600px;
+}
+
+/* Heading and paragraph in text section */
+.text-section h1 {
+    font-size: 20em;
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.text-section p {
+    font-size: 2.2em;
+    left: 20%;
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+.about {
+    position: absolute;
+    top: 50%;          
+    left: 50%;
+    /* opacity: 0;         */
+    transform: translate(-50%, -60%);
+    display: flex;
+    align-items: center;
+    animation: slideFadeIn 2s ease-in-out 9.5s forwards,
+    2s duration, 1s delay;
+}
+
+/*Animation keyframes */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80px); /* Start lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(100%); /* Move to natural position */
+    }
+}
+
+.skills_container {
+    max-width: 1300px;
+    min-height: 100vh; 
+    padding: 20px;
+    margin-top: 700px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.skill_text{
+    color:white;
+    font-size: 35px;
+    transform: translateY();
+    transform: translateX(47%);
+    text-align: center;
+}
+
+.skills_text{
+    padding: 20px; /* Space between the text and the edges of the box */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align text to the top of the box */
+    position: relative; /* Allows positioning adjustments */
+    background-color: #292928;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Width relative to the container */
+    max-width: 800px;
+    min-height: 400px;
+    margin: 100px auto; /* Center horizontally within the container */
+    transform: translate(650px, 50px); /* Adjust the X and Y offset as needed */
+    color: #dcdcdc; /* Text color for readability */
+    font-size: 40px;
+}
+
+
+.skill-title {
+    font-size: 1em;
+    color: white;
+}
+
+.skill-logo {
+    transform: translateX(25px);
+    margin-top: 5px; 
+    width: 60px; 
+    height: auto;
+    color: white;
+}
+
+html, body {
+    scroll-behavior: smooth; 
 }
 
