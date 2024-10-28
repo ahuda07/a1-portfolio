@@ -7,11 +7,14 @@ body {
     flex-direction: column;
     background-color: #222020;
 }
-.container {  display: flex;              /* Change to flex */
-    justify-content: center;    /* Center horizontally */
-    align-items: center;        /* Center vertically */
-    height: 100vh;              /* Full viewport height to ensure centering */
-    text-align: center; }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    height: 100vh;
+}
 
 /*typewriter animation*/
 .text{
@@ -22,18 +25,48 @@ body {
     white-space: nowrap;
     overflow: hidden;
     width: 36em;
-    animation: 
-    typing 3s steps(150),
-    blink 0.8s step-end infinite;
+    animation:
+    typing 3s steps(150,end) forwards,
+    pause 1s 5s,
+    delete 2s steps(150, end) 9s forwards,
+    blink 0.8s step-end infinite; 
     /* animation-delay: 1s; */
+}
+
+.text2{
+    /* display: inline-block; */
+    color: antiquewhite;
+    font-family: monospace;
+    font-size: 50px;
+    border-right: 0.15em solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: 
+    typing2 4s steps(150, end) 4s forwards,
+    delete 3s steps(150, end) 7s forwards,
+    blink 0.8s step-end infinite;
+    margin-left: calc(50% - 8em);
+    /* text-align: center; */
 }
 
 /*Typing animation to mimic typewriter*/
 @keyframes typing {
     0% {width: 0;}
-    99.9% {border-right: .15em solid orange;}
+    99.9% {border-right: .15em solid #5b968e;}
         100% {border: none;}
     }
+
+@keyframes typing2 {
+    0% { width: 0; }
+    100% { width: 28em; }
+    100% {border: none;}
+}
+
+@keyframes delete {
+    0% { width: 100%; }
+    100% { width: 0; }
+}  
 
 /*Cursor blinking animation*/
 @keyframes blink {
@@ -48,12 +81,12 @@ body {
 #social-links {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between icons */
+    gap: 20px;
 }
 
 #social-links a {
     color: white;
-    font-size: 50px; /* Size of social media icons */
+    font-size: 50px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
