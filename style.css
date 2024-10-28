@@ -14,6 +14,11 @@ body {
     height: 100vh;
 }
 
+.divider {
+    height: 800px; /* Adjust this height based on the spacing needed */
+    width: 100%;
+}
+
 /*typewriter animation*/
 .text{
     position: fixed;  
@@ -184,6 +189,7 @@ body {
 }
 
 .text-section p {
+    font-family: monospace;
     font-size: 2.2em;
     left: 20%;
     line-height: 1.6;
@@ -216,55 +222,57 @@ body {
 
 .skills_container {
     max-width: 1300px;
-    min-height: 100vh; 
+    min-height: auto; /* Changed from 100vh to auto */
     padding: 20px;
-    margin-top: 700px; 
+    margin-top: 700px; /* Adjust as needed */
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.skill_text{
-    color:white;
+/* Skills Heading */
+.skill_text {
+    color: white;
     font-size: 70px;
-    transform: translateY();
-    transform: translateX(47%);
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* Skills Grid */
+.skills_grid {
+    display: flex;
+    gap: 50px; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    width:100%;
+}
+
+/* Skill Card */
+.skill_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.skills_text{
-    padding: 20px; /* Space between the text and the edges of the box */
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping if there are many skills */
-    justify-content: flex-start; /* Align items to the start of the container */
-    background-color: #292928;
-    gap: 50px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    width: 100%; 
-    max-width: 800px;
-    min-height: 400px;
-    margin: 100px auto; 
-    transform: translate(650px, 50px); 
-    color: #dcdcdc; 
-    font-size: 40px;
-}
-
-.skill {
-    display: flex;
-    flex-direction:row ;
-    align-items: center; /* Center text and logo */
+/* Skill Logo Styling */
+.skill_logo {
+    width: 50px; 
+    height: 50px;
+    margin-bottom: 10px;
+    object-fit: contain;
 }
 
 
-.skill-title, .skill-java {
-    font-size: 1.5em;
+/* Skill Title Styling */
+.skill_title {
     color: white;
-    margin-bottom: 40px;
-}
-
-.skill-logo {
-    width: 40px; /* Size of the logo */
-    height: auto;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /*Projects grid*/
@@ -273,6 +281,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
+    margin-top: -20px; /* Close gap by reducing top margin */
     text-align: center;
 }
 
@@ -313,6 +322,7 @@ body {
 /* Project Image */
 .project_image {
     width: 100%;
+    height: 100%;
     display: block;
     border-radius: 15px;
 }
@@ -377,8 +387,8 @@ body {
 
 .contact-form label {
     color: white;
-    font-size: 78;
     font-family: monospace;
+    font-size: 15px;
     font-weight: bolder;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -396,7 +406,13 @@ font-family: monospace;
   width: 100%;
 }
 
-
+/*This is how I actually just center everything becuase it wasn't working indivisually*/
+.skills_container, .project_container, .contact-section {
+    width: 100%; 
+    max-width: 1300px; 
+    margin: 50px auto; 
+    padding: 100px 20px;
+}
 
 .submit {
     padding: 10px 15px;
