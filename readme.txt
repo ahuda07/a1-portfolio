@@ -120,4 +120,6 @@ I did not consult with any classmates for this assignment
 
 
 6. Is there anything special we need to know in order to run your code?
-I think everything should run fine, I made git commits and everything should be up to date
+I think everything should run fine, I made git commits and everything should be up to date. One thing is that i did my
+typewriter animation on a 32 inch screen, so all the text looks natural on my page, but on a 27 inch monitor it is cut off, I will fix this later
+so it fits to all sized screens
