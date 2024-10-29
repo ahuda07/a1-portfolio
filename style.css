@@ -14,8 +14,9 @@ body {
     height: 100vh;
 }
 
+/* To create extra space between about and skills section */
 .divider {
-    height: 800px; /* Adjust this height based on the spacing needed */
+    height: 800px;
     width: 100%;
 }
 
@@ -48,6 +49,7 @@ body {
     margin: 100px auto 10px auto;
   }
   
+  /* Navigation button */
   .dropdown-button {
     background-color: #333;
     color: white;
@@ -66,7 +68,7 @@ body {
     background-color: #444;
   }
   
-  /* Drop-Down Content */
+  /* Drop-Down navigation */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -104,7 +106,7 @@ body {
   }
   
 
-
+/* Was trying to implement a following animation after text 1, but couldnt get it to work properly */
 /* .text2{
     /* display: inline-block; */
     /* color: antiquewhite;
@@ -135,6 +137,7 @@ body {
     100% {border: none;}
 } */
 
+/* Deletes text by going backwards */
 @keyframes delete {
     0% { width: 36em; }
     100% { width: 36em; opacity: 0; }
@@ -142,6 +145,7 @@ body {
 }
 
 /*Cursor blinking animation*/
+/* I dont even think this works propely after the animation is done */
 @keyframes blink {
     0%, 100% {
     border-color: #5b968e;
@@ -150,11 +154,11 @@ body {
     border-color: transparent;}
     }
 
-/*Linkedin logo*/
+/*linkedin, github, cv logo*/
 #social-links {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adjust spacing between icons */
+    gap: 20px;
     position: fixed;
     top: 0;
     left: 50%;
@@ -169,6 +173,7 @@ body {
     padding: 10px;
 }
 
+/* For cv logo */
 #social-links a img {
     width: 50px; 
     height: 50px; 
@@ -176,6 +181,7 @@ body {
     margin: auto; 
 }
 
+/* about section slideup */
 @keyframes slideUp {
     0% {
         transform: translateY(100px);
@@ -187,6 +193,7 @@ body {
     }
 }
 
+/* this was an absoulte pain to do */
 .personalimage img{ 
     position: absolute;  
     top: 48%;          
@@ -224,7 +231,7 @@ body {
     gap: 0;
 }
 
-/* Personal image styling */
+/* Personal image styling, i think th transformations dont even matter */
 .personalimage img { 
     transform: translateX(-300px);
     transform: translateY(-205px);
@@ -261,6 +268,7 @@ body {
     color: #dcdcdc;
 }
 
+/* trying to make a seamless animation but failed */
 .about {
     position: absolute;
     top: 50%;          
@@ -287,9 +295,9 @@ body {
 
 .skills_container {
     max-width: 1300px;
-    min-height: auto; /* Changed from 100vh to auto */
+    min-height: auto;
     padding: 20px;
-    margin-top: 700px; /* Adjust as needed */
+    margin-top: 700px;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -340,13 +348,13 @@ body {
     font-weight: bold;
 }
 
-/*Projects grid*/
+
 /* Project Container */
 .project_container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
-    margin-top: -20px; /* Close gap by reducing top margin */
+    margin-top: -20px; 
     text-align: center;
 }
 
@@ -363,7 +371,7 @@ body {
 /* Grid Layout */
 .project_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     color: #222020;
 }
@@ -425,10 +433,9 @@ body {
     max-width: 80%;
     text-align: center;
 }
-
 .contact{
     padding: 50px 20px;
-    background-color: #000; /* Black background */
+    background-color: #000;
   }
 
 .contact-section{
@@ -494,6 +501,7 @@ font-family: monospace;
     border-color: #fff;
   }
 
+  /* I think this is isn't necessary */
 html, body {
     scroll-behavior: smooth; 
 }
