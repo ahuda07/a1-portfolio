@@ -40,6 +40,71 @@ body {
     /* animation-delay: 1s; */
 }
 
+/* Dropdown Navigation Bar */
+.dropdown-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto 10px auto;
+  }
+  
+  .dropdown-button {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    font-family: monospace;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    top: 100%;
+    margin-top: -18px;
+    cursor: pointer;
+  }
+  
+  .dropdown-button:hover {
+    background-color: #444;
+  }
+  
+  /* Drop-Down Content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 240px;
+    max-height: 200px;
+    background-color: #444;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    list-style: none;
+  }
+  
+  .dropdown-content li {
+    padding: 10px 20px;
+  }
+  
+  .dropdown-content li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Display drop-down content when button is hovered */
+  .dropdown-button:hover + .dropdown-content,
+  .dropdown-content:hover {
+    display: block;
+  }
+  
+
+
 /* .text2{
     /* display: inline-block; */
     /* color: antiquewhite;

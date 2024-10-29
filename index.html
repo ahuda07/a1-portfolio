@@ -25,7 +25,6 @@ EMAIL: hudaau@uci.edu
 
 
 <body>
-
   <div id = "container">
     <p class="text">Hello, I'm Ashar Huda, a Software Engineering student at UC Irvine.</p>
     <!-- <p class="text2">Here is my Personal Portfolio</p> -->
@@ -33,10 +32,23 @@ EMAIL: hudaau@uci.edu
   <div id="social-links" style="display: flex; justify-content: center; gap: 20px;">
     <a href="#" class="fa fa-linkedin"></a>
     <a href="#" class="fa fa-github"></a>
-    <a href="images/Ashar Huda CS Resume.pdf" download="Ashar Huda Resume">
-      <img src="images\cv.png" alt="Resume Icon">
+    <a href="https://drive.google.com/file/d/1ibH7dGfWZswjBzakTkoes6oh7pS1kyzV/view?usp=drive_link" target="_blank">
+      <img src="images/cv.png" alt="Resume Icon">
     </a>
   </div>
+
+  <!-- Navigation Bar -->
+  <nav class="dropdown-nav">
+    <div class="dropdown-button">Navigation</div>
+    <ul class="dropdown-content">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+   <!-- About Section -->
   <section class="about-container">
     <h2 class="section-title">About</h2>
     <div class="content">
@@ -50,26 +62,36 @@ EMAIL: hudaau@uci.edu
         </div>
     </div>
 </section>
-<div class="divider"></div>
-<div class="skills_container">
-  <div class="skill_text">Skills</div>
-  <div class="skills_grid">
-      <div class="skill_card">
-          <img src="https://cdn.simpleicons.org/python" alt="Python Logo" class="skill_logo">
-          <p class="skill_title">Python</p>
+<div id ="skills">
+  <div class="divider"></div>
+  <div class="skills_container">
+    <div class="skill_text">Skills</div>
+    <div class="skills_grid">
+        <div class="skill_card">
+            <img src="https://cdn.simpleicons.org/python" alt="Python Logo" class="skill_logo">
+            <p class="skill_title">Python</p>
+        </div>
+        <div class="skill_card">
+            <img src="images/java.png" alt="Java Logo" class="skill_logo">
+            <p class="skill_title">Java</p>
+        </div>
+        <div class="skill_card">
+            <img src="https://cdn.simpleicons.org/cplusplus" alt="C++ Logo" class="skill_logo">
+            <p class="skill_title">C++</p>
+        </div>
+        <div class="skill_card">
+            <img src="https://cdn.simpleicons.org/html5" alt="HTML Logo" class="skill_logo">
+            <p class="skill_title">HTML</p>
+        </div>
+        <div class="skill_card">
+          <img src="https://cdn.simpleicons.org/CSS3" alt="HTML Logo" class="skill_logo">
+          <p class="skill_title">CSS</p>
+        </div>
+        <div class="skill_card">
+          <img src="https://cdn.simpleicons.org/mysql" alt="HTML Logo" class="skill_logo">
+          <p class="skill_title">SQL</p>
       </div>
-      <div class="skill_card">
-          <img src="images/java.png" alt="Java Logo" class="skill_logo">
-          <p class="skill_title">Java</p>
-      </div>
-      <div class="skill_card">
-          <img src="https://cdn.simpleicons.org/cplusplus" alt="C++ Logo" class="skill_logo">
-          <p class="skill_title">C++</p>
-      </div>
-      <div class="skill_card">
-          <img src="https://cdn.simpleicons.org/html5" alt="HTML Logo" class="skill_logo">
-          <p class="skill_title">HTML</p>
-      </div>
+    </div>
   </div>
 </div>
 <!-- <img src="images/java.png" alt="Java Logo" class="skill-logo"> -->
@@ -111,14 +133,6 @@ EMAIL: hudaau@uci.edu
   </section>
 </div>
   </div>
-
-
-
-
-
-
-
-
   <p>
     <!-- <a href="http://validator.w3.org/check?uri=referer">
        W3C validator -->
